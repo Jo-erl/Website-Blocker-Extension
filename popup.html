@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JoErl Blocker</title>
+    <style>
+        body { 
+            width: 300px; 
+            padding: 15px; 
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        #siteInput { 
+            width: 90%; 
+            margin-bottom: 10px; 
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #addSite {
+            width: 100%;
+            padding: 8px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        #addSite:hover {
+            background: #45a049;
+        }
+        .site-list { 
+            max-height: 300px; 
+            overflow-y: auto;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+        .site-item { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            margin: 5px 0; 
+            padding: 8px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+        .site-item:hover {
+            background: #eee;
+        }
+        .remove {
+            padding: 5px 10px;
+            background: #f44336;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .remove:hover {
+            background: #da190b;
+        }
+        .tip {
+            font-size: 12px;
+            color: #666;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <h2>JoErl Blocker</h2>
+    <input type="text" id="siteInput" placeholder="Enter website to block (e.g. facebook.com)">
+    <button id="addSite">Block Site</button>
+    <div class="site-list" id="siteList"></div>
+    <div class="tip">
+        Tip: Right-click anywhere on a webpage to block it directly!
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
